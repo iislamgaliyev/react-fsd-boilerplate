@@ -26,6 +26,7 @@ pnpm-lock.yaml
 *.njsproj
 *.sln
 *.sw?
+yarn.lock
 
 # Environment Variables
 .env
