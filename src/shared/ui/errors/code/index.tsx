@@ -1,7 +1,7 @@
+import { Button } from "@mantine/core"
 import { useTranslation } from "react-i18next"
 
 import s from "./index.module.scss"
-import { Button } from "@mantine/core"
 
 export const CodeErrorComponent = () => {
 	const { t } = useTranslation()

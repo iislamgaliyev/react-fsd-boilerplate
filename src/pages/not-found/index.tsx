@@ -1,8 +1,8 @@
+import { Button } from "@mantine/core"
 import { useNavigate } from "react-router-dom"
 
 import s from "./styles.module.scss"
 import { BurgerIcon } from "./ui"
-import { Button } from "@mantine/core"
 
 const NotFoundPage = () => {
 	const navigate = useNavigate()

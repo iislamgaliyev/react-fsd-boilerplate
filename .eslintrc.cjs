@@ -4,7 +4,6 @@ module.exports = {
 	extends: [
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
-		"plugin:storybook/recommended",
 		"prettier"
 	],
 	ignorePatterns: ["dist", ".eslintrc.cjs"],
@@ -17,5 +16,6 @@ module.exports = {
 		],
 		"react/react-in-jsx-scope": "off",
 		"react/display-name": "off",
+		"react/prop-types": "off",
 	},
 }

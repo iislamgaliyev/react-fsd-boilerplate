@@ -4,7 +4,6 @@ import { FC } from "react"
 
 import { queryClient } from "@/shared/libs/query-client"
 
-
 export const WithReactquery = (Component: FC) => () => (
 	<QueryClientProvider client={queryClient}>
 		<Component />

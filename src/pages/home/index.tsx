@@ -1,4 +1,5 @@
 import { Button } from "@mantine/core"
+
 import s from "./styles.module.scss"
 
 const HomePage = () => {
