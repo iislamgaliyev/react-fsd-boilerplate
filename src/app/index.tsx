@@ -1,6 +1,5 @@
-import { withHocs } from "@/app/lib/with-hocs"
-
-import "@/shared/styles/app.scss"
+import { withHocs } from "@app/lib/with-hocs"
+import "@styles/app.scss"
 
 const App = withHocs(() => {})
 

@@ -1,6 +1,5 @@
+import { CodeErrorComponent } from "@ui/errors"
 import React, { ReactNode } from "react"
-
-import { CodeErrorComponent } from "@/shared/ui/errors"
 
 interface IErrorBoundaryProps {
 	children: ReactNode

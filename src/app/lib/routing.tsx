@@ -1,14 +1,52 @@
+import { UserProvider } from "@app/providers/auth"
+import { AppPages, AuthPages, DashboardPage } from "@constants/routes"
+import HomePage from "@pages/home"
+import NotFoundPage from "@pages/not-found"
+import { AuthWrapper, RouteGuard } from "@processes/auth"
 import { createBrowserRouter, Navigate } from "react-router-dom"
 
-import HomePage from "@/pages/home"
-import NotFoundPage from "@/pages/not-found"
-
-import { AppPages } from "@/shared/constants/routes"
-
 export const router = createBrowserRouter([
+	// *Group auth routes
+	{
+		path: AuthPages.Root,
+		element: <AuthWrapper />,
+		children: [
+			{
+				index: true,
+				path: AuthPages.SignIn,
+				element: <>Sign In</>,
+			},
+			{
+				path: AuthPages.SignUp,
+				element: <>Sign Up</>,
+			},
+			{
+				path: AuthPages.Root,
+				element: <Navigate to={AuthPages.SignIn} replace />,
+			},
+		],
+	},
+	// *Group protected routes
 	{
 		path: AppPages.RootPage,
-		element: <HomePage />,
+		element: (
+			<RouteGuard>
+				<UserProvider>
+					<>Hello</>
+				</UserProvider>
+			</RouteGuard>
+		),
+		children: [
+			{
+				path: DashboardPage.Root,
+				index: true,
+				element: <HomePage />,
+			},
+			{
+				path: AppPages.RootPage,
+				element: <Navigate to={DashboardPage.Root} />,
+			},
+		],
 	},
 	{
 		path: AppPages.NotFoundPage,

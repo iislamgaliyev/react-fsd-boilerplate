@@ -1,6 +1,5 @@
+import { RocketLoader } from "@ui/loaders"
 import { RouterProvider } from "react-router-dom"
-
-import { RocketLoader } from "@/shared/ui/loaders"
 
 import { router } from "./routing"
 

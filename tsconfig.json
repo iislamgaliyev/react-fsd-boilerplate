@@ -21,9 +21,21 @@
 		"noFallthroughCasesInSwitch": true,
 
 		/* Module paths */
-		"baseUrl": "",
+		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"],
+			"@app/*": ["src/app/*"],
+			"@styles/*": ["src/shared/styles/*"],
+			"@pages/*": ["src/pages/*"],
+			"@entities/*": ["src/entities/*"],
+			"@features/*": ["src/features/*"],
+			"@widgets/*": ["src/widgets/*"],
+			"@processes/*": ["src/processes/*"],
+			"@ui/*": ["src/shared/ui/*"],
+			"@constants/*": ["src/shared/constants/*"],
+			"@libs/*": ["src/shared/libs/*"],
+			"@assets/*": ["src/shared/assets/*"],
+			"@types/*": ["src/shared/types/*"],
+			"@shared/*": ["src/shared/*"],
 		},
 	},
 	"include": ["src"],
