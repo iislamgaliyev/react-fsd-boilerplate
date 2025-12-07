@@ -1,7 +1,9 @@
 import { UserProvider } from "@app/providers/auth"
 import { AppPages, AuthPages, DashboardPage } from "@constants/routes"
-import HomePage from "@pages/home"
-import NotFoundPage from "@pages/not-found"
+import { HomePageLazy } from "@pages/home"
+import { NotFoundPageLazy } from "@pages/not-found"
+import { SignInPageLazy } from "@pages/sign-in"
+import { SignUpPageLazy } from "@pages/sign-up"
 import { AuthWrapper, RouteGuard } from "@processes/auth"
 import { createBrowserRouter, Navigate } from "react-router-dom"
 
@@ -14,11 +16,11 @@ export const router = createBrowserRouter([
 			{
 				index: true,
 				path: AuthPages.SignIn,
-				element: <>Sign In</>,
+				element: <SignInPageLazy />,
 			},
 			{
 				path: AuthPages.SignUp,
-				element: <>Sign Up</>,
+				element: <SignUpPageLazy />,
 			},
 			{
 				path: AuthPages.Root,
@@ -40,7 +42,7 @@ export const router = createBrowserRouter([
 			{
 				path: DashboardPage.Root,
 				index: true,
-				element: <HomePage />,
+				element: <HomePageLazy />,
 			},
 			{
 				path: AppPages.RootPage,
@@ -50,7 +52,7 @@ export const router = createBrowserRouter([
 	},
 	{
 		path: AppPages.NotFoundPage,
-		element: <NotFoundPage />,
+		element: <NotFoundPageLazy />,
 	},
 	{
 		path: AppPages.AnyPage,

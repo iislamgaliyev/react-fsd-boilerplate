@@ -1,5 +1,5 @@
 import { Button } from "@mantine/core"
-import { RocketLoader } from "@shared/ui/loaders"
+import { RocketLoader } from "@ui/loaders"
 
 import s from "./styles.module.scss"
 
